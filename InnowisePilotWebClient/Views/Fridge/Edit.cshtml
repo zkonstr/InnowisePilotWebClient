@@ -1,0 +1,48 @@
+﻿@model InnowisePilotWebClient.Models.Fridge
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Fridge</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FridgeId" class="control-label"></label>
+                @*<input asp-for="FridgeId" class="form-control" />*@
+                <span asp-validation-for="FridgeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FridgeName" class="control-label"></label>
+                <input asp-for="FridgeName" class="form-control" />
+                <span asp-validation-for="FridgeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnerName" class="control-label"></label>
+                <input asp-for="OwnerName" class="form-control" />
+                <span asp-validation-for="OwnerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelId" class="control-label"></label>
+                <input asp-for="ModelId" class="form-control" />
+                <span asp-validation-for="ModelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

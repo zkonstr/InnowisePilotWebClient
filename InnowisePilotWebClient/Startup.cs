@@ -51,6 +51,9 @@ namespace InnowisePilotWebClient
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "fridge",
+                    pattern: "{controller=Fridge}/{action=Index}/{id?}");
             });
         }
     }
